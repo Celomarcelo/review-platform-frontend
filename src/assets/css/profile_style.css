@@ -1,0 +1,19 @@
+/* Hides the default file input element */
+.file-input {
+    display: none; /* Makes the file input invisible */
+}
+
+/* Styles for the custom file upload button */
+.custom-file-upload label {
+    cursor: pointer; /* Changes the cursor to indicate the label is clickable */
+    padding: 10px 20px; /* Adds padding around the label for better spacing */
+    background-color: #007bff; /* Sets a blue background color for the label */
+    color: white; /* Sets the text color to white */
+    border-radius: 5px; /* Rounds the corners of the label */
+    display: inline-block; /* Displays the label as an inline-block for controlled dimensions */
+}
+
+/* Hover effect for the custom file upload button */
+.custom-file-upload label:hover {
+    background-color: #0056b3; /* Darkens the background color on hover */
+}

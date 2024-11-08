@@ -1,0 +1,25 @@
+/* Container for background styling */
+.background-container {
+    position: relative; /* Sets relative positioning for child elements */
+    height: 100vh; /* Sets the container height to 100% of the viewport height */
+    width: 100%; /* Sets the container width to 100% of the viewport width */
+}
+
+/* Pseudo-element for the background image overlay */
+.background-container::before {
+    content: ""; /* Creates an empty content for the pseudo-element */
+    position: absolute; /* Positions it absolutely within the .background-container */
+    top: 0; /* Aligns the top edge with the parent container */
+    left: 0; /* Aligns the left edge with the parent container */
+    right: 0; /* Aligns the right edge with the parent container */
+    bottom: 0; /* Aligns the bottom edge with the parent container */
+    /*background-image: url('/public/booksbackground.jpg'); /* Sets the background image */
+    background-size: cover; /* Ensures the image covers the entire element */
+    background-position: center; /* Centers the image within the element */
+    background-repeat: no-repeat; /* Prevents the background from repeating */
+    background-attachment: fixed; /* Fixes the background image during scroll */
+    opacity: 0.1; /* Sets a low opacity for a subtle overlay effect */
+    z-index: -1; /* Places the background behind other elements in .background-container */
+}
+
+

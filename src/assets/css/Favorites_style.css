@@ -1,0 +1,20 @@
+/* Grid layout for the favorites section */
+.favorites-grid {
+    display: grid; /* Sets the display to grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Creates two equal-width columns */
+    gap: 20px; /* Adds space between grid items */
+    align-items: center; /* Centers items vertically within the grid cells */
+}
+
+/* Styles for each favorite item */
+.favorite-item {
+    display: flex; /* Uses flexbox for inner content alignment */
+    justify-content: center; /* Centers content horizontally within the item */
+    align-items: center; /* Centers content vertically within the item */
+}
+
+/* Background and shadow styling */
+.bk-color {
+    background-color: white; /* Sets the background color to white */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adds a shadow effect around the element */
+}

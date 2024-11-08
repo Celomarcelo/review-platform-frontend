@@ -1,0 +1,5 @@
+/* Styles for the comment list */
+.comment-list {
+    list-style-type: none; /* Removes bullet points from the list */
+    padding-left: 0; /* Removes default left padding from the list */
+}
