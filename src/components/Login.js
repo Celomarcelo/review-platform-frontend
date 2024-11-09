@@ -20,6 +20,24 @@ const Login = () => {
     const [passwordError, setError] = useState(null);
 
     /**
+     * checkBackendData
+     * 
+     * This function prints a confirmation message to the console when backend data is received.
+     */
+    const checkBackendData = () => {
+        console.log("Dados recebidos do backend com sucesso!");
+    };
+
+    /**
+     * checkBackendDataFailure
+     * 
+     * This function prints an error message to the console if backend data is not received.
+     */
+    const checkBackendDataFailure = () => {
+        console.log("Falha ao receber dados do backend. Verifique as credenciais ou a conexão.");
+    };
+
+    /**
      * handleSubmit
      * 
      * This function is triggered when the login form is submitted. It prevents the
@@ -35,6 +53,8 @@ const Login = () => {
             password,  // Send password from the form input
         })
             .then(response => {
+                // Check if data was received from the backend
+                checkBackendData();
 
                 // Store the authentication token in localStorage
                 localStorage.setItem('token', response.data.access);
@@ -47,6 +67,7 @@ const Login = () => {
             })
             .catch(error => {
                 // Handle login failure by displaying an error message
+                checkBackendDataFailure();
                 console.error("Login Error:", error);
                 setError('Enter with a valid ID or password.');
             });
