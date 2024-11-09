@@ -56,6 +56,7 @@ const Login = () => {
                 // Check if data was received from the backend
                 checkBackendData();
                 console.log("Token recebido:", response.data.access);
+                console.log("Resposta do backend:", response.data);
 
                 // Store the authentication token in localStorage
                 localStorage.setItem('token', response.data.access);
