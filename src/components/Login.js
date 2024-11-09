@@ -55,12 +55,17 @@ const Login = () => {
             .then(response => {
                 // Check if data was received from the backend
                 checkBackendData();
+                console.log("Token recebido:", response.data.access);
 
                 // Store the authentication token in localStorage
                 localStorage.setItem('token', response.data.access);
 
-                // Stores the user ID in localStorage
-                localStorage.setItem('userId', response.data.user.id);
+                // Check if the user object exists before accessing it
+                if (response.data.user && response.data.user.id) {
+                    localStorage.setItem('userId', response.data.user.id);
+                } else {
+                    console.warn("A resposta do backend não contém o objeto 'user' ou o 'id' do usuário.");
+                }
 
                 // Redirect the user to the homepage after successful login
                 navigate('/');
