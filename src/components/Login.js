@@ -48,7 +48,7 @@ const Login = () => {
         event.preventDefault();  // Prevents default form submission
 
         // Send POST request to the login endpoint
-        axios.post('/api/login/', {
+        axios.post('${process.env.REACT_APP_API_URL}/api/login/', {
             username,  // Send username from the form input
             password,  // Send password from the form input
         })
